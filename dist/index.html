@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Weather</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
+</head>
+
+<body>
+    <input id = "citySerch">
+    <button id = "search" >check</button>
+    <div class="cities"></div>
+    
+
+    <script id="city-template" type="text/x-handlebars-template">
+        {{#each city}}
+        <span class="city-container">
+            <div class ='name'>{{name}}</div>
+            <div class="temp">{{temperature}}</div>
+            <div class = "condition">{{condition}}</div>
+            <button id ="button" class="delete">delete</button>
+            <img src={{conditionPic}} class="pic">
+            <div class="updatedAt">{{updatedAt}}</div>
+        </span>
+        {{/each}}
+    </script>
+
+    
+    
+    <script src="Render.js"></script>
+    <script src="TempManager.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

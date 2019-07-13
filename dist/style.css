@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    background-image: linear-gradient(to bottom right, #1bffcc, #211ca5);
+    padding-top: 4%;
+}
+#search{
+    border-radius: 10px;
+    width: 15%;
+}
+#citySerch{
+width: 70%;
+}
+
+.cities{
+    display: grid;
+}
+.city-container{
+    margin-top: 1em;
+    border: solid #242443 ;
+    background: #494d63;
+    overflow: hidden;
+    border-radius: 10px;
+    display: grid;
+    color: white;
+    grid-template-areas: 
+    'n t c'
+    'n t c'
+    'n p u'
+    'd p u'
+}
+.name{
+    grid-area: n;
+    font-size: 175%;
+    font-family: fantasy;
+}
+.temp{
+    grid-area: t;
+}
+.condition{
+grid-area: c;
+}
+.delete{
+    grid-area: d
+}
+.pic{
+grid-area: p;
+}
+.updatedAt{
+    grid-area: u
+}
